@@ -51,7 +51,7 @@ public class DeleteTransition extends JFrame implements ActionListener {
     private void deleteTransition() {
         String transitionId = transitionIdField.getText();
         try {
-            URL url = new URL("http://localhost:2018/api/v1/transition/delete/" + transitionId);
+            URL url = new URL("http://localhost:2018/api/v1/transition/" + transitionId);
 
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("DELETE");
